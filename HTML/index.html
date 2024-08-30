@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+<link rel="stylesheet" href="/CSS/styles.css">
+    <title>Agenda</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar bg-dark navbar-dark navbar-expand-sm p-4 text-center">
+            <div class="container-fluid">
+               <h1 class="h1 text-light">
+                Agenda Pessoal
+               </h1>
+            </div>
+        </nav>   
+    </header>
+    <main>
+       <div class="container-fluid">
+        <br>
+        <hr>
+       </div>
+       
+        <div id="appointment-form">
+            <input type="text" id="appointment-input" placeholder="Novo Compromisso" class=" btn-group m-3">
+            <input type="date" id="appointment-date" class="btn-group m-3 ">
+            <input type="time" id="appointment-time" class="btn-group m-3">
+            <br>
+            <button id="add-appointment-btn" class="btn-group m-3 btn-dark btn text-center">Adicionar</button>
+            <br>
+        </div>
+        <div class="container-fluid">
+            <hr>
+        </div>
+        <ul id="appointment-list" class="container-fluid m-xxl-4"></ul>
+
+         <!-- Alert personalizado -->
+        <div id="custom-alert" class="custom-alert hidden">
+            <div class="custom-alert-content">
+                <p id="alert-message"></p>
+                <button id="close-alert-btn">Fechar</button>
+            </div>
+        </div>
+
+        <script src="/JAVASCRIPT/javascript.js" defer></script>
+        
+        <br>
+    </main>
+    <hr>
+    <br>
+    <footer>
+        <nav class=" bg-dark navbar-dark p-4  ">
+            <div class="container-fluid ">
+                    <h5 class="h5 text-light text-center">
+                        @GusttaavoMelo on github.com
+                    </h5>
+            </div>
+        </nav>
+    </footer>
+</body>
+</html>

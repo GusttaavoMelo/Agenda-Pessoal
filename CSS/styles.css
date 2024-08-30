@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: cursive;
+}
+
+main {
+    min-height: 500px;
+}
+
+#appointment-form {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+input {
+    justify-content: center;
+    padding: 10px;
+    margin: 5px;
+    width: 100%;
+    max-width: 300px; /* Limite máximo para inputs */
+}
+
+button {
+    justify-content: center;
+    padding: 10px;
+    margin: 5px;
+    width: 100%;
+    max-width: 100px; /* Limite máximo para botões */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #fff;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+}
+
+.remove-btn, .edit-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+
+}
+
+.edit-btn {
+    background-color: orange;
+}
+
+.past-appointment {
+    background-color: rgb(212, 98, 98);
+}
+
+/* Estilo para o alerta personalizado */
+.custom-alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.custom-alert.hidden {
+    display: none;
+}
+
+.custom-alert-content {
+    font-family: cursive;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 400px; /* Limite máximo para o modal */
+}
+
+#close-alert-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#close-alert-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    /* Ajuste para dispositivos móveis e tablets */
+    input, button {
+        width: calc(100% - 5px); /* Ajusta a largura para dispositivos menores */
+    }
+
+    .remove-btn, .edit-btn {
+        margin-left: 5px;
+        padding: 3px 6px;
+        font-size: 12px;
+    }
+
+    #appointment-form {
+        margin: 10px;
+    }
+}
+
+@media (min-width: 769px) {
+    /* Ajustes para telas maiores */
+    #appointment-form {
+        margin: 20px auto;
+    }
+
+    input, button {
+        width: calc(33% - 5px); /* Três colunas em telas maiores */
+        margin: 5px;
+    }
+}
